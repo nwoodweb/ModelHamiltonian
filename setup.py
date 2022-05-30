@@ -28,7 +28,8 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 long_description = open(path.join(here, 'README.md'), encoding='utf-8').read()
-license_full = open(path.join(here, 'LICENSE'), encoding='utf=8').read() 
+license_full = open(path.join(here, 'LICENSE.md'), encoding='utf-8').read() 
+requirements_read = open(path.join(here, 'requirements.txt'), encoding='utf-8').read()
 
 setup(
     name='moha',
@@ -49,7 +50,13 @@ setup(
         'Topic :: Science/Engineering :: Chemistry',
     ],
     python_requires='>=3.6',
-    install_requires=['numpy', 'scipy'],
+    install_requires=requirements_read,
+    extras_require={
+        'doc':[
+            'sphinx',
+            'ipython',
+        ],
+    }
     packages=['moha', 'moha.test'],
     package_dir={'moha': 'moha'},
 )
