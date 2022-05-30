@@ -20,7 +20,7 @@ setup(
     version='0.0.0',
     license='LGPLV3',
     url='moha.qcdevs.org',
-    keywords='chemtools hamiltonians quantum chemistry',
+    keywords='theochem openchemistry hamiltonians quantum chemistry',
     description='Computes 1 or 2 electron Hamiltonians of different models.',
     long_description=long_description,
     classifiers=[
